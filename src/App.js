@@ -32,7 +32,7 @@ const App = () => {
   return (
     <div className="container mx-auto">
       <ImageSearch searchText={(text)=>setTerm(text)}></ImageSearch>
-     {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> : <div className="grid grid-cols-3 gap-4">
+     {isLoading ? <h1 className="text-6xl text-center mx-auto mt-32">Loading...</h1> : <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {
           images.map(image=> <ImageCard key ={image.id} image={image}></ImageCard>)
         }
